@@ -1,0 +1,3 @@
+[submodule "demos/ko.arrow"]
+	path = demos/ko.arrow
+	url = https://github.com/lagerone/ko.arrow.git
