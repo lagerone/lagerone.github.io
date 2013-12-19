@@ -1,0 +1,70 @@
+.app-wrapper {
+	width: 600px;
+	margin: 5em auto;
+	padding: 2em 3em 5em 3em;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+pre {
+	background-color: rgba(150,150,150,0.1);
+	border: 1px dashed rgba(50,50,50,0.2);
+	font-size: .8em;
+}
+
+.explanation {
+	font-weight: bold;
+}
+
+.form-row {
+	display: block;
+	overflow: hidden;
+	padding: 1em 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.form-row:first-child {
+	border-top: 1px solid #ddd;
+}
+
+/*.form-row:hover {
+	background-color: rgba(206, 224, 243, 0.5);
+}*/
+
+.editor {
+	display: block;
+	width: 300px;
+	float: left;
+}
+
+.type {
+	display: block;
+	width: 200px;
+	float: left;
+}
+
+.label-text {
+	display: inline-block;
+	width: 80px;
+	margin: 1em 0;
+	padding-right: 1em;
+	text-align: right;	
+}
+
+input, textarea, select {
+	padding: .3em;
+}
+
+.editor textarea {
+	width: 176px;
+	height: 150px;
+	margin: .7em 0;
+}
+
+.editor select,
+.type-enum select {
+	margin: 1.3em 0;
+}
+
+.editor select {
+	width: 187px;
+}

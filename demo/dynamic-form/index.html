@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dynamic form</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="app/styles.css">
+</head>
+<body>
+	
+	<div id="app" class="app-wrapper">
+		<h1>Dynamic form</h1>
+		<p class="explanation">JSON data from server:</p>
+		<pre data-bind="text: ko.toJSON(initData, null, 2)"></pre>		
+		<p class="explanation">Result:</p>
+		<div data-bind="template: { name: getTemplateName, foreach: items }"></div>
+	</div>
+
+	<script type="text/html" id="text-template">
+		<div class="form-row">
+			<label class="editor">
+				<span class="label-text" data-bind="text: name"></span>
+				<input type="text" data-bind="value: value, attr: { placeholder: $root.getPlaceHolderValue($data) }" />
+			</label>
+			<label class="type">
+				<span class="label-text">Type</span>
+				<select data-bind="options: $parent.types, value: type"></select>
+			</label>
+		</div>
+	</script>
+	
+	<script type="text/html" id="int-template">
+		<div class="form-row">
+			<label class="editor">
+				<span class="label-text" data-bind="text: name"></span>
+				<input type="number" data-bind="value: value" />
+			</label>
+			<label class="type">
+				<span class="label-text">Type</span>
+				<select data-bind="options: $parent.types, value: type"></select>
+			</label>
+		</div>
+	</script>
+	
+	<script type="text/html" id="textarea-template">
+		<div class="form-row">
+			<label class="editor">
+				<span class="label-text" data-bind="text: name"></span>
+				<textarea data-bind="value: value"></textarea>
+			</label>
+			<label class="type">
+				<span class="label-text">Type</span>
+				<select data-bind="options: $parent.types, value: type"></select>
+			</label>
+		</div>
+	</script>
+
+	<script type="text/html" id="enum-template">
+		<div class="form-row">
+			<label class="editor">
+				<span class="label-text" data-bind="text: name"></span>
+				<select data-bind="options: enumItems, optionsText: 'name'"></select>
+			</label>
+			<label class="type type-enum">
+				<span class="label-text">Type</span>
+				<select data-bind="options: $parent.types, value: type"></select>
+			</label>
+		</div>
+	</script>
+
+	<script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/knockout-3.0.0/index.js"></script>
+	<script src="bower_components/knockout-delegatedEvents/build/knockout-delegatedEvents.min.js"></script>
+	<script src="bower_components/underscore/underscore-min.js"></script>
+	<script src="app/app.js"></script>
+</body>
+</body>
+</html>
