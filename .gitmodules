@@ -1,9 +1,0 @@
-[submodule "demos/ko.arrow"]
-	path = demos/ko.arrow
-	url = https://github.com/lagerone/ko.arrow.git
-[submodule "demos/dynamic-form"]
-	path = demos/dynamic-form
-	url = https://github.com/lagerone/dynamic-form.git
-[submodule "demos/sitemarks"]
-	path = demos/sitemarks
-	url = git@github.com:lagerone/sitemarks.git
